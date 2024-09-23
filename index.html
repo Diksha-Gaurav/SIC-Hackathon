@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Road Maintenance Feedback</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Citizen Feedback on Road Maintenance</h1>
+    </header>
+
+    <main>
+        <section id="feedback-form">
+            <h2>Submit your feedback</h2>
+            <form id="feedback" action="submit-feedback.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="phone no.">Phone no. :</label>
+                <input type="text" id="phone no." name="phone no." required>
+
+                <label for="location">Location of Issue:</label>
+                <input type="text" id="location" name="location" required>
+
+                <label for="feedback">Describe the issue:</label>
+                <textarea id="feedback-text" name="feedback" rows="5" required></textarea>
+
+                <label for="urgency">Urgency:</label>
+                <select id="urgency" name="urgency">
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+
+                <label for="photo">Upload Photo (optional):</label>
+                <input type="file" id="photo" name="photo" accept="image/*">
+
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </section>
+        <hr/>
+
+        <section id="recent-feedback">
+            <h2>Recent Feedback</h2>
+            <div id="feedback-list">
+                <!-- JavaScript will inject recent feedback here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Road Maintenance Department</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
